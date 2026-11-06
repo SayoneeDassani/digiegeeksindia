@@ -1,0 +1,58 @@
+export const serviceOptions = ["AI Solutions", "Custom Software Development", "Website / Web Application", "Mobile Application", "Cloud & Integrations", "Technology Consulting", "Not Sure Yet"] as const;
+
+export const detailedServices = [
+  {
+    id: "ai-solutions", shortName: "AI Solutions", title: "Custom AI Solutions & Business Automation", option: serviceOptions[0],
+    intro: "We help Indian SMEs and startups build custom AI applications and bring AI into their existing software. Our work includes AI assistants, intelligent document processing, knowledge search, and workflow automation, starting with your business needs, available data, and budget.",
+    capabilities: ["Custom AI applications", "Generative AI & LLM applications", "AI assistants", "Intelligent knowledge search", "Document intelligence", "AI integration", "AI automation"],
+    problem: "Your team may spend too long finding information, reviewing documents, or handling repeated information requests. AI can help with these tasks when the right data, permissions, and review process are in place.",
+    example: "An internal assistant could help employees search approved company documents and point them to its sources. A document workflow could extract invoice fields and flag uncertain entries for review. Generative AI uses language models, often called LLMs, to work with text, such as drafting a summary for someone to check.",
+    approach: "We assess the task and available data, agree on evaluation criteria, and build a focused prototype where useful. We then develop the application and its integrations, test it against representative examples, and plan deployment and monitoring together.",
+    cta: "Discuss an AI project",
+  },
+  {
+    id: "custom-software", shortName: "Custom Software", title: "Custom Software Development", option: serviceOptions[1],
+    intro: "We develop business applications that reflect the way your organisation works. This includes new products, internal platforms, and improvements to software you already depend on.",
+    capabilities: ["Business applications", "CRM & management systems", "Dashboards", "Customer portals", "Internal tools", "Software modernisation"],
+    problem: "Spreadsheets, disconnected tools, and ageing applications can make routine work difficult to manage. A purpose-built system can bring information together, define access clearly, and give people a reliable way to complete their work.",
+    example: "A management system could track customer relationships and project progress in one place. An operations dashboard could draw on existing systems, while a customer portal could give clients access to their own requests and records.",
+    approach: "We map the workflows with the people using them, define requirements and user roles, and design the data model and interfaces. Development proceeds in agreed stages with testing, feedback, documentation, and a clear handover.",
+    cta: "Talk through your software requirements",
+  },
+  {
+    id: "web-development", shortName: "Web Development", title: "Website & Web Application Development", option: serviceOptions[2],
+    intro: "From a clear business website to a complete web product, we build experiences that are understandable, responsive, and useful to the people visiting them.",
+    capabilities: ["Business websites", "Custom web applications", "SaaS products", "E-commerce", "Booking platforms", "Progressive web applications"],
+    problem: "You may need a credible online presence, a service customers can use themselves, or a product people can access from any browser. A web application can make those interactions easier to manage and maintain.",
+    example: "We can develop a booking platform with availability and customer accounts, an e-commerce experience, or a subscription software product. A progressive web application can also offer selected app-like features, such as installation, where the browser supports them.",
+    approach: "We agree on the audience and essential journeys, develop the structure and design, then implement the application and required integrations. Accessibility, page performance, search visibility, testing, and deployment form part of the plan.",
+    cta: "Plan your website or web application",
+  },
+  {
+    id: "mobile-development", shortName: "Mobile Applications", title: "Mobile Application Development", option: serviceOptions[3],
+    intro: "We help founders and businesses turn mobile product ideas into Android and iOS applications, with a scope that fits the problem and the people using the app.",
+    capabilities: ["Android applications", "iOS applications", "Cross-platform development", "Startup MVPs", "Business applications"],
+    problem: "Your customers or staff may need access while away from a desk, a simpler way to complete frequent tasks, or capabilities tied to a mobile device. We help decide whether a mobile app is the right fit and which platforms to support.",
+    example: "A field team could record updates and photographs from a phone. A startup could test its core product with a minimum viable product, or MVP: an initial version focused on the features needed to learn from real users.",
+    approach: "We define the core user journeys, assess platform and device needs, and choose an appropriate native or cross-platform approach. We build and test the app and supporting services, then help prepare the release, documentation, and next development priorities.",
+    cta: "Discuss your mobile application",
+  },
+  {
+    id: "cloud-integration", shortName: "Cloud & Integration", title: "Cloud & Systems Integration", option: serviceOptions[4],
+    intro: "We help applications run reliably and work together. This can involve cloud infrastructure, connecting existing services, or moving older software towards an architecture that is easier to operate.",
+    capabilities: ["Cloud-based applications", "APIs", "System integration", "Microservices", "Migration & modernisation", "Application infrastructure"],
+    problem: "Disconnected systems can create duplicate work and inconsistent records. Older infrastructure can make changes difficult. We review how your applications communicate, where they run, and what needs to improve.",
+    example: "An API, a defined way for software systems to exchange information, could connect a customer portal to your management platform. A staged cloud migration could move an application while preserving the workflows your team relies on. Microservices can separate responsibilities where that complexity is justified.",
+    approach: "We review dependencies, access requirements, costs, and operational needs before proposing changes. We plan integrations or migration stages, implement and test the changes, and prepare monitoring, deployment instructions, and recovery considerations.",
+    cta: "Review your systems with us",
+  },
+  {
+    id: "consulting", shortName: "Technology Consulting", title: "Technology Consulting & Automation", option: serviceOptions[5],
+    intro: "When you know something needs to change but are unsure where to begin, we help make the technical options clearer and turn them into a practical plan.",
+    capabilities: ["Technical discovery", "AI feasibility assessments", "Architecture planning", "Software requirements", "MVP planning", "Workflow automation", "Development roadmaps"],
+    problem: "An idea can be difficult to scope without knowing the technical dependencies, likely trade-offs, or what to build first. Existing processes can also accumulate manual steps that would benefit from a closer look.",
+    example: "We could assess whether your documents are suitable for an AI search tool, plan the first release of a new product, review an application’s architecture, or identify where an automated workflow would reduce repeated data entry.",
+    approach: "We discuss your objectives, review the relevant systems and workflows, and document the requirements and constraints. You receive a clear view of the options, priorities, and a development roadmap that can guide the next decision.",
+    cta: "Work through the options together",
+  },
+];

@@ -1,0 +1,20 @@
+import { createRequire } from "node:module";
+import { readFile, writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+const require = createRequire(import.meta.url);
+const sharp = require("sharp");
+const root = new URL("../", import.meta.url);
+await sharp(await readFile(new URL("public/images/social-card.svg", root))).png().toFile(fileURLToPath(new URL("public/images/social-card.png", root)));
+const png = await sharp(await readFile(new URL("src/app/icon.svg", root))).resize(32, 32).png().toBuffer();
+// ICO directory followed by a PNG-encoded 32px icon.
+const directory = Buffer.alloc(22);
+directory.writeUInt16LE(1, 2);
+directory.writeUInt16LE(1, 4);
+directory[6] = 32;
+directory[7] = 32;
+directory.writeUInt16LE(1, 10);
+directory.writeUInt16LE(32, 12);
+directory.writeUInt32LE(png.length, 14);
+directory.writeUInt32LE(22, 18);
+await writeFile(new URL("src/app/favicon.ico", root), Buffer.concat([directory, png]));
+console.log("Generated social card and DigiGeeks favicon.");
